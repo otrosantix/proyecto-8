@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+}
+
+.galeria-paisajes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 120px);
+  gap: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.galeria-paisajes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagen-playa-niebla {
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+.imagen-sala-blanca {
+  grid-column: 1;
+  grid-row: 4 / 6;
+}
+
+.imagen-mesa-comida {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.imagen-puerta-roja {
+  grid-column: 2;
+  grid-row: 3 / 6;
+}
+
+.imagen-edificios-blancos {
+  grid-column: 3;
+  grid-row: 1 / 4;
+}
+
+.imagen-playa-colina {
+  grid-column: 3;
+  grid-row: 4 / 6;
+}
+
+@media (max-width: 800px) {
+  .galeria-paisajes {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+    grid-auto-rows: 220px;
+  }
+
+  .galeria-paisajes img {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .galeria-paisajes {
+    grid-template-columns: 1fr;
+  }
+}
